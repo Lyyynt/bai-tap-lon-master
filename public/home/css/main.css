@@ -1,0 +1,106 @@
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial;
+    padding: 10px;
+    background: #e9d8f4;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #58257b;
+  }
+  .topnav {
+      float: left;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #e9d8f4;
+     
+      position: sticky;
+      top: 0; 
+      position: fixed;
+      width: 100%;
+    }
+    
+    
+    .topnav a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    .topnav a:hover {
+      color: white;
+      background-color: #db7093;
+      font-weight: bold;
+    }
+    
+  
+  /* Tạo hai cột không bằng nhau, float cạnh nhau 
+   Cột trái */
+  .leftcolumn { 
+    float: left;
+    width: 75%;
+  }
+  
+  /* Cột phải */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #e9d8f4;
+    padding-left: 20px;
+  }
+  
+  /* Hình ảnh tượng trưng */
+  .fakeimg {
+    background-color: #baa1cc;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Thêm định dạng thẻ cho bài viết */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Clear float khác sau các cột */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 10px;
+    text-align: center;
+    background: white;
+    margin-top: 10px;
+  }
+  
+  /* Bố cục linh hoạt: các cột xếp chồng lên nhau thay vì cạnh nhau khi màn hình 
+  có chiều rộng dưới 700px */
+  @media screen and (max-width: 700px) {
+    .leftcolumn, .rightcolumn { 
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Bố cục linh hoạt: Thanh menu điều hướng xếp chồng lên nhau thay vì cạnh nhau
+  khi màn hình có chiều rộng dưới 300px  */
+  @media screen and (max-width: 300px) {
+    .topnav li a {
+      float: none;
+      width: 100%;
+    }
+  }
